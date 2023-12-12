@@ -1,0 +1,73 @@
+﻿@model DO_AN_1.Models.products
+@using DO_AN_1.Utilities;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Xác nhận thêm sản phẩm</h2>
+    </div>
+    <div class="container shadow p-5">
+        <div class="row pb-2">
+            <h2>Thêm mới sản phẩm</h2>
+        </div>
+    </div>
+    <form method="post" asp-action="Create">
+        <div asp-validation-summary="All"></div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="name">name</label>
+                <input type="text" class="form-control mb-3" asp-for="name">
+                <span class="alert-danger" asp-validation-for="name"></span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="price">price</label>
+            <input type="text" class="form-control mb-3" asp-for="name">
+            <span class="alert-danger" asp-validation-for="name"></span>
+
+           @* <select class="form-select" asp-for="price" id="Levels">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>*@
+        </div>
+        @*<div class="form-group col-md-6">
+            <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+            <label asp-for="image">image</label>
+            <select class="form-control" asp-for="image" asp-items="@(new SelectList(ViewBag.mnlist, "Value", "Text"))">
+            </select>
+        </div>*@
+        <div class="form-group col-md-6">
+            <label asp-for="Class">Class</label>
+            <input type="text" class="form-control mb-3" asp-for="Class">
+            <span class="alert-danger" asp-validation-for="Class"></span>
+        </div>
+        <div class="from-group col-md-12">
+            <label class="control-label">Images</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="btn btn-success" type="button" onclick="openDialog()">Choose a pic</button>
+                </div>
+                <input type="text" class="form-control" asp-for="image" id="file_input" aria-describedby="button-addon2">
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="isActive">isActive</label>
+            <input type="text" class="form-control mb-3" asp-for="isActive">
+            <span class="alert-danger" asp-validation-for="isActive"></span>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <label>
+                @Html.CheckBox("IsActive", false)
+                Hiển thị
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary p-2">Thêm</button>
+        <a asp-controller="products" asp-action="Index" class="btn btn-lg btn-warning p-2">Quay lại</a>
+    </form>
+</main>
+@{
+    var summerNote = new DO_AN_1.Areas.Admin.Models.SummerNote("#View");
+    <partial name="_SummerNote" model="summerNote" />
+}

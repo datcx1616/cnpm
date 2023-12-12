@@ -1,0 +1,15 @@
+﻿@using DO_AN_1.Models;
+@model IList<Contact>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+    <div class="col-lg-3 col-md-3 col-sm-6 text-center">
+        <div class="contact__widget">
+            <span class="@item.Class"></span>
+            <h4>@item.Name</h4>
+            <p>@item.Content</p>
+        </div>
+    </div>
+    }
+</div>

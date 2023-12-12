@@ -1,0 +1,209 @@
+﻿@model DO_AN_1.Models.Blog
+@using DO_AN_1.Utilities;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@*<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Xác nhận thêm bài viết</h2>
+    </div>
+    <div class="container shadow p-5">
+        <div class="row pb-2">
+            <h2>Thêm mới bài viết</h2>
+        </div>
+    </div>
+    <form method="post" asp-action="Create">
+        <div asp-validation-summary="All"></div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Title">Title</label>
+                <input type="text" class="form-control mb-3" asp-for="Title">
+                <span class="alert-danger" asp-validation-for="Title"></span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="PostOrder">PostOrder</label>
+            <select class="form-select" asp-for="PostOrder" id="PostOrder">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+            <label asp-for="Link">Link</label>
+            <select class="form-control" asp-for="Link" asp-items="@(new SelectList(ViewBag.mnlist, "Value", "Text"))">
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Category">Category</label>
+            <input type="text" class="form-control mb-3" asp-for="Category">
+            <span class="alert-danger" asp-validation-for="Category"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="View">View</label>
+            <input type="text" class="form-control mb-3" asp-for="View">
+            <span class="alert-danger" asp-validation-for="View"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="Status">Status</label>
+            <input type="text" class="form-control mb-3" asp-for="Status">
+            <span class="alert-danger" asp-validation-for="Status"></span>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <label>
+                @Html.CheckBox("IsActive", false)
+                Hiển thị
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary p-2">Thêm</button>
+        <a asp-controller="Blog" asp-action="Index" class="btn btn-lg btn-warning p-2">Quay lại</a>
+    </form>
+</main>*@
+@*<main id="main" class="main">
+    <div class="pagetitle">
+        <h2> Thêm mới bài viết</h2>
+    </div>
+    <form asp-action="Create" method="post">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Title">Chọn mục</label>
+                <select asp-for="Title"
+                      class="form-control"
+                        asp-items="@(new SelectList(ViewBag.mnlist, "Value", "Text"))">
+                  </select>
+                  <span asp-validation-for="Title" class="alert-danger"></span>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Content">Content</label>
+                <input type="text" class="form-control mb-3" asp-for="Content">
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="View">View</label>
+                <input type="text" class="form-control mb-3" asp-for="View">
+            </div>
+            <div class="from-group col-md-12">
+                <label class="control-label">Images</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-success" type="button" onclick="openDialog()">Choose a pic</button>
+                    </div>
+                    <input type="text" class="form-control" asp-for="Image" id="file_input" aria-describedby="button-addon2" >
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Content">Content</label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+            </div>
+            <div class="form-group col-md-6 mt-3 mb-3">
+                <label>
+                    @Html.CheckBox("IsActive", false)
+                    Hiển thị
+                </label>
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="CreatedAt" class="form-control" value="@Functions.getCurrenDate()" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="PostOrder" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Category" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Status" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Link" class="form-control" value="NULL" />
+            </div>
+        </div>
+        <a class="btn btn-lg btn-warning p-2 mr-5" href="javascript:history.back()">
+            <i class="bi bi-trash-fill"></i> Quay lại
+        </a>
+        <button type="submit" class="btn btn-lg btn-danger p-2">
+            <i class="bi bi-trash-fill"></i> Lưu lại
+        </button>
+    </form>
+</main>
+
+@{
+    var summerNote = new DO_AN_1.Areas.Admin.Models.SummerNote("#Content");
+    <partial name="_SummerNote" model="summerNote" />
+}*@
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Thêm mới bài viết</h2>
+    </div>
+    <!-- Begin Form -->
+    <form asp-action="Create" method="post">
+        <div class="form-row">
+
+           @* <div class="form-group col-md-6">
+                <label asp-for="Title">Chọn mục</label>
+                <select asp-for="Title"
+                        class="form-control"
+                        asp-items="@(new SelectList(ViewBag.mnList, "Value", "Text"))">
+                </select>
+                <span asp-validation-for="Title" class="alert-danger"></span>
+            </div>*@
+
+            <div class="form-group col-md-12">
+                <label asp-for="Title">Title</label>
+                <input type="text" class="form-control mb-3" asp-for="Title">
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="CreatedAt">CreatedAt</label>
+                <input type="text" class="form-control mb-3" asp-for="CreatedAt">
+            </div>
+            <div class="from-group col-md-12">
+                <label class="control-label">Images</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-success" type="button" onclick="openDialog()">Choose a pic</button>
+                    </div>
+                    <input type="text" class="form-control" asp-for="Image" id="file_input" aria-describedby="button-addon2">
+                </div>
+            </div>
+            <div class="form-group col-md-12">
+                <label asp-for="Content">Content</label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+            </div>
+
+            <div class="form-group col-md-6 mt-3 mb-3">
+                <label>
+                    @Html.CheckBox("IsActive", false)
+                    Hiển thị
+                </label>
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="CreatedAt" class="form-control" value="@Functions.getCurrenDate()" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="PostOrder" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Category" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Status" class="form-control" value="1" />
+            </div>
+            <div class="form-group d-none">
+                <input asp-for="Link" class="form-control" value="NULL" />
+            </div>
+        </div>
+
+        <a class="btn btn-lg btn-warning p-2 mr-5" href="javascript:history.back()">
+            <i class="bi bi-arrow-left-circle"></i> Quay lại
+        </a>
+        <button type="submit" class="btn btn-lg btn-danger p-2">
+            <i class="bi bi-trash-fill"></i> Lưu lại
+        </button>
+    </form>
+    <!-- End Form -->
+</main>
+
+
+@{
+    var summerNote = new DO_AN_1.Areas.Admin.Models.SummerNote("#View");
+    <partial name="_SummerNote" model="summerNote" />
+}

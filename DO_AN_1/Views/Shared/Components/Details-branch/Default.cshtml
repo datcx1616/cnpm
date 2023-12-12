@@ -1,0 +1,16 @@
+﻿@using DO_AN_1.Models;
+@model IList<RecentPost>;
+
+<div class="blog__sidebar__item">
+    <h4>Xem ngay sản phẩm & Ưu đãi theo khu vực của bạn</h4>
+    @foreach (var item in Model)
+    {
+        <ul>
+            <li>
+                <a href="#">
+                    @item.Abstract
+                </a>
+            </li>
+        </ul>
+    }
+</div>

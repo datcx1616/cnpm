@@ -1,0 +1,20 @@
+﻿@model IList<Menu>
+
+<nav class="header__menu">
+    <ul>
+        @*@foreach (var menu in Model.Where(m => m.Levels == 1).OrderBy(n => n.itemOrder))
+        {
+        var pid = menu.Id;
+        var smenu = Model.Where(p => p.parent == pid).OrderBy(p => p.itemOrder).ToList();
+        @if (smenu.Count == 0)
+        {
+        <li class="active"><a href="./index.html">@menu.name</a></li>
+        }
+        }*@
+        <li class=""><a asp-action="@Html.Raw(Model[0].actionName)" asp-controller="@Html.Raw(Model[0].controllerName)">@Html.Raw(Model[0].name)</a></li>
+        <li class=""><a asp-action="@Html.Raw(Model[1].actionName)" asp-controller="@Html.Raw(Model[1].controllerName)">@Html.Raw(Model[1].name)</a></li>
+        <li class=""><a asp-action="@Html.Raw(Model[2].actionName)" asp-controller="@Html.Raw(Model[2].controllerName)">@Html.Raw(Model[2].name)</a></li>
+        <li class=""><a asp-action="@Html.Raw(Model[3].actionName)" asp-controller="@Html.Raw(Model[3].controllerName)">@Html.Raw(Model[3].name)</a></li>
+        <li class=""><a asp-action="@Html.Raw(Model[4].actionName)" asp-controller="@Html.Raw(Model[4].controllerName)">@Html.Raw(Model[4].name)</a></li>
+    </ul>
+</nav>

@@ -1,0 +1,37 @@
+﻿@model DO_AN_1.Models.User
+
+<div class="container">
+    <div class="row">
+        <div class="col text-center">
+            <div class="section_title new_arrivals_title">
+                <h2>Đăng nhập</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            @if (TempData.ContainsKey("message"))
+            {
+                <div class="alert alert-primary" role="alert">
+                    @TempData["message"]
+                </div>
+            }
+            <form method="post" asp-action="Index">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Tên đăng nhập</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" asp-for="UserName"
+                           placeholder=" nhập tên đăng nhập">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Mật khẩu</label>
+                    <input type="password" class="form-control" id="exampleInputEmail1" asp-for="Password"
+                           placeholder="nhập mật khẩu">
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" style="margin: 10px 0;">
+        <a asp-action="Register" asp-controller="Login">Đăng ký</a>
+    </div>
+</div>

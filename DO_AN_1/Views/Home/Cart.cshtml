@@ -1,0 +1,97 @@
+﻿@model IList<view_Cart_Product>
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2 style="color: #000">Giỏ hàng</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+<!-- Shoping Cart Section Begin -->
+<section class="shoping-cart spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shoping__cart__table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="shoping__product">Sản phẩm</th>
+                                <th>Giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                long totalPrice = 0;
+                            }
+                            @foreach (var item in Model)
+                            {
+                                long total = item.Quantity * item.Price;
+                                totalPrice += total;
+                                <tr>
+                                    <td class="shoping__cart__item">
+                                        <img src="@item.image" alt="" style="height: 100px;">
+                                        <h5>@item.name</h5>
+                                    </td>
+                                    <td class="shoping__cart__price">
+                                        $@item.Price
+                                    </td>
+                                    <td class="shoping__cart__quantity">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="text" value="@item.Quantity">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="shoping__cart__total">
+                                        $@total
+                                    </td>
+                                    <td class="shoping__cart__item__close">
+                                        <span class="icon_close"></span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="shoping__cart__btns">
+                    <a href="/Home/shop" class="primary-btn cart-btn">Tiếp tục mua hàng</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="shoping__continue">
+                    <div class="shoping__discount">
+                        <h5>Mã giảm giá</h5>
+                        <form action="#">
+                            <input type="text" placeholder="nhập mã giảm giá">
+                            <button type="submit" class="site-btn">Áp mã</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="shoping__checkout">
+                    <h5>Tổng tiền</h5>
+                    <ul>
+                        <li>Total <span>$@totalPrice</span></li>
+                    </ul>
+                    <a href="#" class="primary-btn">Tiến hành thanh toán</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shoping Cart Section End -->

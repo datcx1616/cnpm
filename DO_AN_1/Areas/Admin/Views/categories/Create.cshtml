@@ -1,0 +1,63 @@
+﻿@model DO_AN_1.Models.Categori
+@using DO_AN_1.Utilities;
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<main id="main" class="main">
+    <div class="pagetitle">
+        <h2>Xác nhận thêm slide</h2>
+    </div>
+    <div class="container shadow p-5">
+        <div class="row pb-2">
+            <h2>Thêm mới slide</h2>
+        </div>
+    </div>
+    <form method="post" asp-action="Create">
+        <div asp-validation-summary="All"></div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="name">name</label>
+                <input type="text" class="form-control mb-3" asp-for="name">
+                <span class="alert-danger" asp-validation-for="name"></span>
+            </div>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="controllerName">controllerName</label>
+            <select class="form-select" asp-for="controllerName" id="Levels">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="alert-danger" asp-validation-summary="ModelOnly"></div>
+            <label asp-for="parent">parent</label>
+            <select class="form-control" asp-for="parent" asp-items="@(new SelectList(ViewBag.mnlist, "Value", "Text"))">
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="isActive">isActive</label>
+            <input type="text" class="form-control mb-3" asp-for="isActive">
+            <span class="alert-danger" asp-validation-for="isActive"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="itemOrder">itemOrder</label>
+            <input type="text" class="form-control mb-3" asp-for="itemOrder">
+            <span class="alert-danger" asp-validation-for="itemOrder"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label asp-for="ItHot">ItHot</label>
+            <input type="text" class="form-control mb-3" asp-for="ItHot">
+            <span class="alert-danger" asp-validation-for="ItHot"></span>
+        </div>
+
+        <div class="form-group mt-5 mb-5">
+            <label>
+                @Html.CheckBox("IsActive", false)
+                Hiển thị
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary p-2">Thêm</button>
+        <a asp-controller="Menu" asp-action="Index" class="btn btn-lg btn-warning p-2">Quay lại</a>
+    </form>
+</main>
+

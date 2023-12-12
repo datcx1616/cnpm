@@ -1,0 +1,117 @@
+﻿@model DO_AN_1.Models.Blog
+<!-- Blog Details Hero Begin -->
+<section class="blog-details-hero set-bg" data-setbg="../img/BannerShop.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog__details__hero__text">
+                   @* <h2>The Moment You Need To Remove Garlic From The Menu</h2>
+                    <ul>
+                        <li>By Michael Scofield</li>
+                        <li>January 14, 2019</li>
+                        <li>8 Comments</li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Hero End -->
+<!-- Blog Details Section Begin -->
+<section class="blog-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 order-md-1 order-2">
+                <div class="blog__sidebar">
+                    <div class="blog__sidebar__search">
+                        <form action="#">
+                            <input type="text" placeholder="Search...">
+                            <button type="submit"><span class="icon_search"></span></button>
+                        </form>
+                    </div>
+                   @* <div class="blog__sidebar__item">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Beauty (20)</a></li>
+                            <li><a href="#">Food (5)</a></li>
+                            <li><a href="#">Life Style (9)</a></li>
+                            <li><a href="#">Travel (10)</a></li>
+                        </ul>
+                    </div>*@
+                    @await Component.InvokeAsync("branch")
+                    @await Component.InvokeAsync("RecentPost")
+                    <div class="blog__sidebar__item">
+                        <h4>Tìm kiếm bởi</h4>
+                        <div class="blog__sidebar__item__tags">
+                            <a href="#">Apple</a>
+                            <a href="#">Beauty</a>
+                            <a href="#">Vegetables</a>
+                            <a href="#">Fruit</a>
+                            <a href="#">Healthy Food</a>
+                            <a href="#">Lifestyle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-7 order-md-1 order-1">
+                <div class="blog__details__text">
+                    <img src="https://file.hstatic.net/1000112469/article/htj04933_b704a1eb6b614c2bafbb7dabd83233d3.jpg" alt="">
+                    <p>
+                        Chọn nhẫn cưới đúng chuẩn cũng giống như chọn đúng người, bởi chiếc nhẫn cũng như người bạn đời, luôn đồng hành cùng bạn trên suốt hành trình hôn nhân hạnh phúc. Một cặp nhẫn cưới phù hợp cần phải xem xét rất nhiều yếu tố, vậy làm sao để chọn được cặp cưới ưng ý theo bạn cả đời?
+
+                        Dâu rể hãy tham khảo ngay công thức chọn nhẫn cưới đúng ý nhất từ Huy Thanh Jewelry nhé!
+                    </p>
+                    <h3>
+                        ƯU ĐÃI NGAY 15% KHI MUA COMBO 2 SẢN PHẨM TRANG SỨC
+                    </h3>
+                    <p>
+                        Đầu tiên, bạn cần biết là bàn tay mình thuộc loại nào. Hãy ước lượng tỷ lệ chiều dài ngón tay dài nhất của bạn với chiều dài lòng bàn tay. Nếu chiều dài ngón tay dài nhất có số đo bằng ⅞ chiều dài lòng bàn tay thì những ngón tay được coi là dài. Nếu thấp hơn ⅞ thì được coi là ngón tay ngắn.
+
+                        Với những đôi có ngón tay ngắn thì nên chọn nhẫn có bản hẹp, nhiều đá nhỏ nhằm tạo ảo giác về chiều dài ngón tay, tránh những thiết kế nhẫn quá phức tạp.
+
+                        Nếu ngón tay dài thì đặc biệt phù hợp với những kiểu nhẫn đính kim cương cổ điển hay mặt đá vuông, hoặc những kiểu nhẫn có 1 đá chủ và nhiều đá tấm.
+
+                        Trường hợp chu vi ngón tay lớn hơn 52mm đối với nữ và lớn hơn 58mm đối với nam thì bạn đang có ngón tay lớn. Bí quyết để chọn nhẫn cho dáng tay này là tìm kiểu nhẫn không làm lộ phần da ở 2 bên ngón tay. Nên chọn nhẫn bản dày, đảm bảo nó che được ⅓ đốt tay đầu tiên; hoặc nhẫn kép với nhiều kiểu nhẫn mix với nhau giúp che bớt sự mũm mĩm của ngón tay.
+
+                        Hoặc bạn cũng có thể lựa chọn những chiếc nhẫn hình dạng góc cạnh, thiết kế không đối xứng nhằm giảm thiểu độ rộng của ngón tay.
+                    </p>
+                </div>
+                <div class="blog__details__content">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="blog__details__author">
+                                <div class="blog__details__author__pic">
+                                    <img src="../img/Admin.jpg" alt="">
+                                </div>
+                                <div class="blog__details__author__text">
+                                    <h6>Xuân Đạt</h6>
+                                    <span>Admin</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="blog__details__widget">
+                                <ul>
+                                    <li><span>Danh mục:</span> sản phẩm</li>
+                                    <li><span>Tags:</span> tất cả, xu hướng, phong cách sống</li>
+                                </ul>
+                                <div class="blog__details__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#"><i class="fa fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Section End -->
+<!-- Related Blog Section Begin -->
+@await Component.InvokeAsync("Posts")
+<!-- Related Blog Section End -->

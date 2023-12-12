@@ -1,0 +1,209 @@
+﻿@model DO_AN_1.Models.products
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-section set-bg" data-setbg="../img/BannerShop.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                  @*  <h2>Vegetable’s Package</h2>
+                    <div class="breadcrumb__option">
+                        <a href="./index.html">Home</a>
+                        <a href="./index.html">Vegetables</a>
+                        <span>Vegetable’s Package</span>
+                    </div>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+<!-- Product Details Section Begin -->
+<section class="product-details spad">
+    <div class="container">
+        <div class="row" id="msg-add-to-cart">
+            
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__item">
+                        <img class="product__details__pic__item--large"
+                             src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj.png" alt="">
+                    </div>
+                    <div class="product__details__pic__slider owl-carousel">
+                        <img data-imgbigurl="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj.png"
+                             src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj.png" alt="">
+                        <img data-imgbigurl="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-01.png"
+                             src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-01.png" alt="">
+                        <img data-imgbigurl="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-02.png"
+                             src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-02.png" alt="">
+                        <img data-imgbigurl="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-02.png"
+                             src="https://cdn.pnj.io/images/thumbnails/485/485/detailed/119/gnctxmy000454-nhan-nam-vang-18k-dinh-da-citrine-pnj-01.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__text">
+                    <h3>Nhẫn nam Vàng trắng 10K đính đá ECZ PNJ XMXMW000200</h3>
+                    <div class="product__details__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <span>(18 reviews)</span>
+                    </div>
+                    <div class="product__details__price">8.848.000 đ</div>
+                    <p>
+                        Ưu đãi:
+                        <br>
+                        <br />
+                        Nhập mã DEALSOC giảm đến 999k khi thanh toán VNPAY-QR
+                        <br>
+                        <br />
+
+                        Giảm 100k với đơn từ 3.000.000 khi thanh toán ngay qua Payoo bằng thẻ Quốc Tế. Xem thêm
+                    </p>
+                    <div class="product__details__quantity">
+                        <div class="quantity">
+                            <div class="pro-qty">
+                                <input type="text" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="add-to-cart" data-id="@Model.id" class="primary-btn"><a href="/Home/cart">Mua Hàng</a></button>
+                    <a href="/Home/cart" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                    <ul>
+                        <li><b>Tình Trạng</b> <span>Còn Hàng</span></li>
+                        <li><b>Vận Chuyển</b> <span>01 Ngày Vận Chuyển. <samp> miễn phí ngày hôm nay</samp></span></li>
+                        <li><b>Trọng Lượng</b> <span>0.2 g</span></li>
+                        <li>
+                            <b>Chia Sẻ</b>
+                            <div class="share">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="product__details__tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                               aria-selected="true">Mô tả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab"
+                               aria-selected="false">Thông tin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                               aria-selected="false">Đánh giá <span>(1)</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Thông tin sản phẩm</h6>
+                                <p>
+                                    Nhẫn vàng tây nam
+                                    Nhẫn vàng tây nam là một trong những loại trang sức phổ biến nhất, hiện đang được nhiều cánh mày râu lựa chọn nhất. Nhẫn vàng tây nam là loại nhẫn được làm từ vàng nguyên chất kết hợp với các kim loại khác. Dựa theo tỷ lệ pha trộn khác nhau mà nhẫn nam vàng tây được phân ra nhiều loại khác nhau để phù hợp với nhiều đối tượng và phân khúc khách hàng:
+
+                                    Nhẫn nam vàng 10K: Tức là trong tổng khối lượng bao gồm khoảng 41,7% vàng, 33% bạc, 25% đồng và các kim loại khác như niken, thiếc, Palladium, kẽm và mangan.
+
+                                    Nhẫn nam vàng 14K: Là hợp kim giữa vàng nguyên chất cùng một số kim loại khác như đồng, sắt, niken…, trong đó vàng nguyên chất chiếm 58,3% trong tổng khối lượng.
+
+                                    Nhẫn nam vàng 16K: Được chế tác từ vàng 16K là hợp kim gồm 66,6% vàng nguyên chất và 33,4% còn lại là hỗn hợp các kim loại khác.
+
+                                    Nhẫn nam vàng 18K: Hàm lượng vàng nguyên chất có trong nhẫn nam 18K chiếm tới 75%, còn 25% phần còn lại là các kim loại quý khác.
+
+                                    Trong tất cả các loại nhẫn vàng tây nam trên thị trường, nhẫn vàng 18K nam đang là loại nhẫn nam được ưa chuộng nhất hiện nay. Đặc biệt là những nhẫn vàng nam tầm giá 5 triệu đang được thị hiếu người dùng nhất, bởi giá thành phù hợp với đại đa số người tiêu dùng Việt Nam. Trong đó, nhẫn trơn nam vàng 18k cũng là mẫu mã được đại đa số phân khúc khách hàng lựa chọn. Ngoài ra, nhẫn 18K nam ngày càng được lựa chọn làm nhẫn cưới thay cho các nhẫn vàng ta truyền thống.
+                                </p>
+                                <p>
+                                    Nhẫn vàng trắng nam làm từ hợp kim của vàng gồm vàng nguyên chất và một số kim loại quý khác như Paladi, Kiken, Platin… Trong quá trình chế tạo, màu vàng của nhẫn vàng trắng nam bị mất đi và thay bằng màu trắng. Mặc dù vậy, giá trị của nhẫn vàng trắng nam không bị thay đổi vì nó vẫn là vàng thật.
+
+                                    Trong chế tác nhẫn vàng trắng nam, tỷ lệ kim loại pha trộn với vàng nguyên chất phần lớn là Niken, bởi niken có tính cứng, bền rất cao.
+
+                                    Các mẫu nhẫn nam vàng trắng cũng đang dần trở nên phổ biến hơn ở thị trường trong nước. Ở thị trường nước ngoài, các dòng nhẫn vàng trắng nam bán rất chạy, được các quý ông săn đón nhiều nhất.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Mua nhẫn nam đẹp ở đâu uy tín và chất lượng nhất?</h6>
+                                <p>
+                                    Công ty Cổ phần Vàng bạc đá quý Phú Nhuận PNJ
+                                    Trải qua hơn 30 năm phát triển và vươn tầm thế giới, tính đến nay công ty PNJ đã có gần 6000 nhân viên cùng với 353 cửa hàng được phân bố khắp cả nước. Ngoài ra PNJ còn có nhà máy chế tạo được hơn 4 triệu sản phẩm/năm, cung ứng việc làm cho hơn 1200 nhân viên. Đây được xem là xí nghiệp chế tác trang sức lớn nhất khu vực Châu Á.    
+                                </p>
+                                <p>
+                                    Những năm trở lại đây, người dùng có xu hướng chọn mua các sản phẩm nhẫn tại các thương hiệu nổi tiếng, thay vì chọn mua tại các cửa hàng nhỏ lẻ. Do vậy mà các sản phẩm nhẫn nam PNJ ngày càng trở nên đa dạng hơn về mẫu mã và phân khúc giá để phù hợp với nhiều đối tượng khách hàng hơn.
+
+                                    Nhẫn PNJ nam không chỉ bao gồm các sản phẩm nhẫn nam vàng mà các dòng cao cấp như nhẫn kim cương nam pnj hay các dòng nhẫn bạc nam pnj cũng rất đa dạng.
+
+                                    Hơn nữa, các sản phẩm PNJ nhẫn nam cũng sẽ được hỗ trợ đổi trả trong vòng 48H, bảo hành xuyên suốt quá trình sử dụng và bảo hành rơi vỡ sản phẩm nếu bạn đặt mua online trên trang website của PNJ.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-3" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Lý Thị Khởi Ly:</h6>
+                                <p>
+                                    cảm ơn PNJ đã có thiết kế đơn giản hợp phong cách của mình, mình đã đi các thương hiệu lân cận khác ko có cái nào có thể đáp ứng được nhu cầu của mình trừ PNJ.
+                                </p>
+                                <h6>Hồ Thị Mai Anh:</h6>
+                                <p>
+                                    hôm qua mình vừa được tặng từ mẹ, món quà tốt nghiệp, vừa đẹp vừa sáng không thể nào ngừng ngắm và thôi thích thú được cả
+                                </p>
+                                <h6>Nguyễn Thị Hoài Lan:</h6>
+                                <p>
+                                    Mặt dây chuyền đơn giản và tinh tế, tui đã tậu 1 chiếc cho bản thân mình, thích hợp với những bạn có gu thời trang đơn giản như tui trừ PNJ.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Product Details Section End -->
+<!-- Related Product Section Begin -->
+<section class="related-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title related__product__title">
+                    <h2>Sản Phẩm liên quan</h2>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeAsync("products")
+    </div>
+</section>
+<!-- Related Product Section End -->
+@* Tối sửa rồi làm thêm trang giỏ hàng luôn *@
+<script>
+    const url = window.location.origin
+    function addToCart() {
+        const addToCartBtns = document.getElementById('add-to-cart')
+        addToCartBtns.onclick = function () {
+            const productID = addToCartBtns.dataset.id
+                fetch(`${url}/add-to-cart-${productID}`)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        const msgAddToCart = document.getElementById("msg-add-to-cart")
+                        msgAddToCart.innerHTML += `
+                            <div class="alert alert-${data.status}" role="alert">
+                              ${data.msg}
+                            </div>
+                        `
+                    });
+            }
+    }
+    addToCart()
+</script>
